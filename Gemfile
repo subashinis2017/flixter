@@ -41,9 +41,10 @@ gem 'bootstrap', '>= 4.3.1'
 gem 'simple_form'
 gem 'devise'
 # gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
-gem 'carrierwave'
+
 gem "mini_magick"
 gem 'carrierwave-aws'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
