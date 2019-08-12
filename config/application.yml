@@ -1,6 +1,0 @@
-# config/application.yml
-
-AWS_ACCESS_KEY: "AKIATDJHRHKQ6OCBYUSY"
-AWS_SECRET_KEY: "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"
-AWS_BUCKET:     "flixter-image-upload"
-AWS_REGION:     "us-east-1"
