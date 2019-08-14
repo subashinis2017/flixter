@@ -45,6 +45,7 @@ gem 'devise'
 gem "mini_magick"
 gem 'carrierwave-aws'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'stripe'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
