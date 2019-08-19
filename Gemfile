@@ -47,6 +47,8 @@ gem 'carrierwave-aws'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'stripe'
 gem 'ranked-model'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
