@@ -49,6 +49,7 @@ gem 'stripe'
 gem 'ranked-model'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'font-awesome-rails'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
