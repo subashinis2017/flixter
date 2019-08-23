@@ -3,8 +3,10 @@
   <head>
     <title>Flixter</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="http://vjs.zencdn.net/5.12.6/video-js.css" rel="stylesheet">
   </head>
 
@@ -14,19 +16,19 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Flixter</a>
+        <%= link_to 'Flixter', root_path, class: 'navbar-brand' %>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-md-0">
             <li class="nav-item">
               <%= link_to 'See All Courses', courses_path, class: 'nav-link' %>
             </li>
-         </ul>
+          </ul>
           <ul class="navbar-nav">
-            <% if user_signed_in? %>
+          <% if user_signed_in? %>
               <li class="nav-item">
                 <%= link_to 'My Dashboard', dashboard_path, class: 'nav-link' %>
-              </li>
+              </li>            
               <li class="nav-item">
                 <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
               </li>
@@ -35,22 +37,22 @@
                 <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
               </li>
               <li class="nav-item">
-                <%= link_to 'Sign up!', new_user_registration_path, class: 'nav-link' %>
-              </li>
+                <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
+              </li>            
             <% end %>
-          </ul>
+          </ul>        
         </div>
       </nav>
-
-      <% if notice.present? %>
-        <p class="alert alert-info"><%= notice %></p>
-      <% end %>
-      <% if alert.present? %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
-
-      <%= yield %>
     </div>
+        <% if notice.present? %>
+          <p class="alert alert-info"><%= notice %></p>
+        <% end %>
+        <% if alert.present? %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+
+    <%= yield %>
+    
     <div id="footer">
       <div class="container">
         <div class="row">
@@ -68,31 +70,31 @@
             <br />
             <%= link_to 'Careers', '#' %>
             <br />
-            <%= link_to 'Privacy Policy', privacy_path %>
+            <%= link_to 'Privacy Policy', 'privacy_path' %>
           </div>
           <div class="col-12 col-sm-3">
             <b>Contact</b>
             <br />
-            my@email.com
+            subashinis2017@gmail.com
             <br />
             One Kendall Square
             <br />
             Cambridge MA, 02113
           </div>
-          <div class="col-12 col-sm-3 social">
+          <div class="col-12 col-sm-3">
             <b>Social</b>
             <br />
-            <br />
+            <br />  
             <%= link_to 'https://github.com/subashinis2017' do %>
               <span class="fa fa-github-square fa-2x social-button"></span>
             <% end %>
             <span class="fa fa-facebook-square fa-2x social-button"></span>
             <span class="fa fa-twitter-square fa-2x social-button"></span>
-          </div>
-        </div>
-      </div>
+          </div> 
+        </div>     
+      </div>    
     </div>
-    
+
     <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
     <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   </body>
